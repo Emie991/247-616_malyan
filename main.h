@@ -24,6 +24,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 //DEFINITIONS REQUISES PAR LE PROGRAMME:
 

@@ -7,6 +7,7 @@
 //un bon site: http://unixwiz.net/techtips/termios-vmin-vtime.html
 
 //INCLUSIONS
+#define _GNU_SOURCE
 #include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -17,7 +18,6 @@
 
 //Definitions privees
 #define PILOTESERIEUSB_TTY "/dev/ttyACM0"
-
 //#define PILOTESERIEUSB_TTY "/dev/ttyUSB0"
 
 //Declarations de fonctions privees:

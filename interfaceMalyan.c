@@ -65,3 +65,20 @@ int interfaceMalyan_genereUneErreur(void)
 {
   return interfaceMalyan_ecritUneCommande("x000\n", 5);
 }
+
+int interfaceMalyan_donneLaPosition(void)
+{
+  return interfaceMalyan_ecritUneCommande("M114\n", 5);  // Commande M114 pour obtenir la position
+}
+
+int interfaceMalyan_vaALaPosition(int x,int y,int z)
+{
+  char commande[64]; 
+  sprintf(commande, "G0 X%d Y%d Z%d\n", x, y, z);  // Commande G0 pour déplacer
+  return interfaceMalyan_ecritUneCommande(commande, 15);
+}
+
+int interfaceMalyan_retourneALaMaison(void)
+{
+  return interfaceMalyan_ecritUneCommande("G28\n", 4);  // Commande G28 pour retourner à l'origine
+}
